@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MentorsNotes
+    </title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+     <!-- Favicon -->
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="book_grid.css" rel="stylesheet" />
+     <style>
+        
+  section{
+    width: 98%;
+    margin: 10px auto;
+    padding: 2px;
+}
+header{
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header div{
+    display: flex;
+}
+header div p{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 0 10px;
+    text-align: center;
+}
+header div p span{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 0 0 0 2px;
+}
+header div p.active{
+    background: #00ffc4;
+    color: white;
+}
+header form{
+    position: relative;
+    
+}
+header form input{
+    padding: 12px 15px;
+    border: none;
+    width: 400px;
+    outline: none;
+    border-radius: 25px;
+    background: whitesmoke;
+}
+header form i.fa{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: royalblue;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 20px;
+}
+header form i.record{
+    background: white;
+    animation: voice-recording 1s infinite;
+    animation-delay: 1s;
+}
+@keyframes voice-recording {
+    0%{
+        box-shadow: 0 0 5px red;
+    }
+    50%{
+        box-shadow: 0 0 10px 10px red;
+    }
+    100%{
+        box-shadow: 0 0 5px red;
+    }
+    
+}
+section main{
+    width: 90%;
+    margin: 5px auto;
+}
+main ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+main ul li{
+    list-style: none;
+    width: 22.4%;
+    height: auto;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.5s all;
+    background: whitesmoke;
+    overflow: hidden;
+}
+ li img{
+     width: 100%;
+    height: 58%;
+ }
+ 
+ .productbutton{
+    display: flex;
+    justify-content: space-around;
+ }
+
+
+
+ ul.list-display li{
+     width: 70%;
+     display: flex;
+     align-items: center;
+ }
+  ul.list-display li img{
+      width: auto;
+      width: 300px;
+      margin-right: 50px;
+  }
+   ul.list-display li .detail{
+       width: 70%;
+   }
+  ul.list-display li .detail h2,
+  ul.list-display li .detail p,
+  ul.list-display li .detail h4{
+      font-size: 30px;
+      line-height: 30px;
+      margin: 10px auto;
+  }
+  ul.list-display li .detail p,
+  ul.list-display li .detail h4{
+      font-size: 20px;
+  }
+  ul.list-display li .icon{
+      width: 150px;
+      height: auto;
+  }
+  ul.list-display li .icon span{
+      display: block;
+      margin: 50px auto;
+      float: initial;
+      font-size: 20px;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    main ul li{
+    list-style: none;
+    width: 44%;
+    height: auto;
+    /* padding: 20px; */
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.5s all;
+    /* background: rgb(189, 6, 6); */
+    overflow: hidden;
+}
+li img{
+     width: 100%;
+    height: 50%;
+ }
+ .productbutton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+ .productbutton h4{
+    justify-content: center;
+    margin-left: 30px;
+ }
+.gird{
+    display: none;
+}
+.list{
+    display: none;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+}
+.grid-hide{
+    display: none;
+}
+     </style>
+</head>
+<body>
+
+     <!-- Navbar Start -->
+     <nav
+     class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0"
+   >
+     <a href="index.html" class="navbar-brand">
+       <h1 class="m-0 text-primary ">
+         <i class="fa fa-book-reader me-3"></i>MentorsNotes
+       </h1>
+     </a>
+     <button
+       type="button"
+       class="navbar-toggler"
+       data-bs-toggle="collapse"
+       data-bs-target="#navbarCollapse"
+     >
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarCollapse">
+       <div class="navbar-nav mx-auto">
+         <a href="index.html" class="nav-item nav-link active">Home</a>
+         <a href="allproducts.html" class="nav-item nav-link">Exam Store</a>
+
+         <!-- <div class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Exam Store</a>
+                     <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                         <a href="facility.html" class="dropdown-item">IAS</a>
+                         <a href="team.html" class="dropdown-item">PCS</a>
+                         <a href="call-to-action.html" class="dropdown-item">NEET</a>
+                     </div>
+                 </div> -->
+         <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+       </div>
+       <a
+         href="contact.html"
+         class="btn rounded-pill btn-primary rounded-pill px-3 d-none d-lg-block"
+         >Join Us<i class="fa fa-arrow-right ms-3"></i
+       ></a>
+     </div>
+   </nav>
+    <!-- Navbar End -->
+	<section>
+		<header>
+			<div class="grid-hide">
+				<p class="gird active"><i class="fas fa-th-large"></i> <span>Gird</span></p>
+				<p class="list"><i class="fas fa-list"></i> <span>List</span></p>
+			</div>
+			<form action="">
+				<input type="text" placeholder="search">
+				<i class="fa fa-microphone" id="voice-search"></i>
+			</form>
+		</header>
+		<main>
+			<div class="container ">
+
+                <div class="row  book-grid">
+
+                    <li class="book-card">
+                        <img
+                    class="img-fluid"
+                    alt="100%x280"
+                    src="img/bihar_police_sub_inspector.png"
+                  /> 
+                        <div >
+                            <h5 class="book-tittle">
+                                Bihar Police Sub Inspector Mentors notes Hindi Medium -4 books
+                                
+                              </h5>
+                              <p class="price text-center">
+                                <del>₹4500/-</del> ₹1249/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a>
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/BPSC.png" >
+                        <div >
+                            <h5 class="book-tittle">
+                                BPSC Hindi MentorsNotes – General Studies(Pre & Mains) – 11 Books
+                              </h5>
+                              <p class="price text-center">
+                               <del>₹11999/-</del> ₹3249/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/Primary.png" >
+                        <div >
+                            <h5 class="book-tittle">
+                                BPSC Primary Teacher (Prathmik Teacher) MentorsNotes
+                              </h5>
+                              <p class="price text-center">
+                                <del>₹4599/-</del> ₹1649/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/computer teacher.png" >
+                        <div >
+                            <h5 class="book-tittle">
+                                BPSC computer Teacher shikshak Books mentorsnotes 
+                              </h5>
+                              <p class="price text-center">
+                                <del>₹5599/-</del> ₹1899/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/secondary.png" >
+                        <div >
+                            <h5 class="book-tittle">
+                                BPSC secondary Teacher complete package-Subject Biology MentorsNotes
+                              </h5>
+                              <p class="price text-center">
+                                <del>₹8999/-</del> ₹3449/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/constable.png" >
+                        <div >
+                            <h5 class="book-tittle">
+                                Bihar Police constable Hindi Medium Latest Edition MentorsNotes
+                              </h5>
+                              <p class="price text-center">
+                                <del>₹5599/-</del> ₹1849/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/BSSC.png" >
+                        <div >
+                            <h5 class="book-tittle">
+                                BSSC - miter level Hindi Medium Book Latest Edition MentorsNotes
+                              </h5>
+                              <p class="price text-center">
+                                <del>₹3999/-</del> ₹1549/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                        </div>
+                        
+                    </li>
+
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/UPSC-CSE.png" >
+                        <div >
+                            <h4 class="book-tittle">
+                                UPSC CSE – Notes Hindi Medium – Latest Edition 
+                              </h4>
+                              <p class="price text-center">
+                                <del>₹36000/-</del> ₹8700/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/up-police-sub-inspector.png" >
+                        <div >
+                            <h4 class="book-tittle">
+                                Uttar Pradesh Police Sub Inspector/Sergeant Mentors notes –
+                                Hindi Medium
+                              </h4>
+                              <p class="price text-center">
+                                <del>₹4500/-</del> ₹1249/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/UP-pulice-constable.png" >
+                        <div >
+                            <h4 class="book-tittle">
+                                UP Police constable Hindi Medium Books Latest Edition
+                              </h4>
+                              <p class="price text-center">
+                                <del>₹4199/-</del> ₹1049/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                            
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/uppsc-cse.png" >
+                        <div >
+                            <h4 class="book-tittle">
+                                uppsc-cse Pre & Mains Latest Edition Hindi Medium Books
+                                
+                              </h4>
+                              <p class="price text-center">
+                                <del>₹14999/-</del> ₹3999/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                            
+                        </div>
+                        
+                    </li>
+
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/mp-pulice-constable.png" >
+                        <div >
+                            <h4 class="book-tittle">
+                                MP Pulice Constable in Hindi
+                              </h4>
+                              <p class="price text-center">
+                                <del>₹4000/-</del> ₹1000/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/mp-sub-inspector.png" >
+                        <div >
+                            <h4 class="book-tittle">
+                                Mp Police Sub Inspector/Sergeant Hindi Medium Latest Edition
+                              </h4>
+                              <p class="price text-center">
+                                <del>₹4650/-</del> ₹1649/-
+                              </p>
+                              <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                >Buy Now</a
+                              >
+                        </div>
+                        
+                    </li>
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/mp-psc.png" >
+                        <div >
+                            <h4 class="book-tittle">
+                                MPPSC Pre & Mains Hindi Medium Latest Edition
+                               </h4>
+                               <p class="price text-center">
+                                 <del>₹14000/-</del> ₹3559/-
+                               </p>
+                               <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                 >Buy Now</a >
+                        </div>
+                        
+                    </li>
+                
+                    <li class="book-card">
+                        <img
+                         class="img-fluid"
+                        alt="100%x280" src="img/rajasthan-RAS.png" >
+                        <div >
+                            <h4 class="book-tittle">
+                                Complete Study material for General Studies Pre & Mains Latest Edition Hindi Medium Books</h4>
+                                <p class="price text-center">
+                                  <del>₹12599/-</del> ₹3549/-
+                                </p>
+                                <a href="order.html" class="btn rounded-pill btn-primary text-center buy-now"
+                                  >Buy Now</a >
+                        </div>
+                        
+                    </li>
+
+                    
+                </div>
+            </div>
+		</main>	
+	</section>
+
+ <!-- Footer Start -->
+ <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <h3 class="text-white mb-4">Get In Touch</h3>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>shahberi greater Noida,  near Gaur City Mall</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 7903253994</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>mentorsnotes26@gmail.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="https://twitter.com/MentorsNotes92"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100095453984942"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/mentors_notes92/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/mentors-notes-916105287/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h3 class="text-white mb-4">Quick Links</h3>
+               
+                <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                <a class="btn btn-link text-white-50" href="allproducts.html">Our Books</a>
+                <a class="btn btn-link text-white-50" href="https://maps.app.goo.gl/PmVMHkof3zRBCea6A">Our office</a>
+              
+            </div>
+           
+            <div class="col-lg-4 col-md-6">
+                <h3 class="text-white mb-4">About Us</h3>
+                <p>Mentorsnote provide best general studies books for all states competitive exam</p>
+                
+            </div>
+        </div>
+    </div>
+   
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
+ <!-- JavaScript Libraries -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="lib/wow/wow.min.js"></script>
+ <script src="lib/easing/easing.min.js"></script>
+ <script src="lib/waypoints/waypoints.min.js"></script>
+ <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+ <!-- Template Javascript -->
+ <script src="js/main.js"></script>
+<script>
+       let gird, lis, ul, mic, search,li;
+
+gird = document.querySelector('.gird');
+lis = document.querySelector('.list');
+ul = document.querySelector('.container');
+mic = document.getElementById('voice-search');
+search = document.querySelector('input');
+li =  document.getElementsByTagName('li');
+
+lis.onclick = e=>{
+    ul.classList.add('list-display');
+    lis.classList.add('active');
+    gird.classList.remove('active');
+}
+gird.onclick = ()=>{
+    ul.classList.remove('list-display');
+    lis.classList.remove('active');
+    gird.classList.add('active');
+}
+
+// search Item
+
+search.onkeyup = ()=>{
+    const  x = search.value.toLowerCase();
+    showItem(x);
+    
+}
+function showItem(x) {
+    for(let list of li){
+        let product = list.children[1].children[0].innerHTML;
+        let name = product.toLowerCase();
+        if (name.search(x) > -1)
+        {
+            list.style.display = "";
+        }else{
+            list.style.display = "none";
+        }
+    }
+}
+// Voice Search
+mic.onclick = ()=> {
+        mic.classList.add('record');
+        let recognition = new webkitSpeechRecognition;
+        recognition.lang = 'en-US';
+        recognition.start();
+        recognition.onresult = (e)=>{
+            const m = search.value = e.results[0][0].transcript;
+            showItem(m);
+            mic.classList.remove('record');
+        }
+
+    }
+</script>
+
+</body>
+</html>
+
